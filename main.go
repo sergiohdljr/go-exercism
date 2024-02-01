@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"github.com/sergiohdljr/go-exercism.git/numbers"
+)
 
 func main() {
-	fmt.Print("hello world")
+	print(numbers.CalculateCost(1))
 }
