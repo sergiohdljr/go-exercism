@@ -18,26 +18,22 @@ func CalculateWorkingCarsPerMinute(productionRate int, successRate float64) int 
 }
 
 // CalculateCost works out the cost of producing the given number of cars.
-// working...
 func CalculateCost(carsCount int) uint {
+	const groupOfTeenCarsPrice = 95000
+	const individualCarsPrice = 10000
+    var groupOfTen = carsCount / 10 
+    var carsRemaning = carsCount % 10
+    
+	var carsCost uint
+
+    if(carsCount >= 10){
+        carsCost := (float64(groupOfTen) * groupOfTeenCarsPrice) + (float64(carsRemaning) * individualCarsPrice)
+        return  uint(carsCost) 
+    } 
+    
+	carsCost = uint(individualCarsPrice * carsCount)
+	  
+    
+    return carsCost
 	
-	var cost uint
-
-	const groupOfTeenCarsPrice = 95.000
-	const individualCarsPrice = 10.000
-
-	var groupOfTen = carsCount/10
-	var remaining = carsCount % 10
-
-	if(groupOfTen > 0 && remaining > 0){
-		cost := uint( int(groupOfTen * groupOfTeenCarsPrice) + int(remaining * individualCarsPrice) )
-		return cost  
-	}  
-	
-	if(groupOfTen < 0){
-		cost := individualCarsPrice * float64(remaining)
-		return uint(cost)
-	}
-
-	return cost
 }
