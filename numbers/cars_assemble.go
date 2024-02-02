@@ -21,13 +21,13 @@ func CalculateWorkingCarsPerMinute(productionRate int, successRate float64) int 
 func CalculateCost(carsCount int) uint {
 	const groupOfTeenCarsPrice = 95000
 	const individualCarsPrice = 10000
-    var groupOfTen = carsCount / 10 
-    var carsRemaning = carsCount % 10
+    groupOfTen := carsCount / 10 
+    carsRemaning := carsCount % 10
     
 	var carsCost uint
 
     if(carsCount >= 10){
-        carsCost := (float64(groupOfTen) * groupOfTeenCarsPrice) + (float64(carsRemaning) * individualCarsPrice)
+        carsCost = uint((float64(groupOfTen) * groupOfTeenCarsPrice) + (float64(carsRemaning) * individualCarsPrice)) 
         return  uint(carsCost) 
     } 
     
