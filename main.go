@@ -1,9 +1,15 @@
 package main
 
 import (
-	"github.com/sergiohdljr/go-exercism.git/numbers"
+	"github.com/sergiohdljr/go-exercism.git/strings"
 )
 
 func main() {
-	print(numbers.CalculateCost(1))
+	
+	message := `
+             **************************
+             *    BUY NOW, SAVE 10%   *
+             ************************** `
+
+	print(strings.CleanupMessage(message))
 }
