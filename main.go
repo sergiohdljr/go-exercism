@@ -5,11 +5,5 @@ import (
 )
 
 func main() {
-	
-	message := `
-             **************************
-             *    BUY NOW, SAVE 10%   *
-             ************************** `
-
-	print(strings.CleanupMessage(message))
+	print(strings.AssignTable("Christiane", 27, "Frank", "on the left", 23.7834298))	
 }
