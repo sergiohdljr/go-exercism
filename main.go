@@ -1,9 +1,12 @@
 package main
 
 import (
-	"github.com/sergiohdljr/go-exercism.git/strings"
+	"fmt"
+	"github.com/sergiohdljr/go-exercism.git/slices"
 )
 
 func main() {
-	print(strings.AssignTable("Christiane", 27, "Frank", "on the left", 23.7834298))	
+	cards := slices.RemoveItem([]int{3, 2, 6, 4, 8}, 2)
+    fmt.Println(cards, "// Output: [3 2 4 8]")
+
 }

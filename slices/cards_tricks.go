@@ -12,12 +12,43 @@ func FavoriteCards() []int {
 // If the index is out of range, we want it to return -1.
 // ***TODO*** 
 func GetItem(slice []int, index int) int {
+    if index < 0 || index >= len(slice){
+        return -1
+    }
+    return slice[index]
+}
 
-     itemIndex := slices.Index(slice,index) 
+// SetItem writes an item to a slice at given position overwriting an existing value.
+// If the index is out of range the value needs to be appended.
+func SetItem(slice []int, index, value int) []int {
+	
+    if index < 0 || index >= len(slice){
+        appendItem := append(slice,value)
+        return appendItem
+    }
 
-     if itemIndex != -1 {
-        return slice[itemIndex]
-     }
+    slice[index] = value
 
-    return itemIndex
+    return  slice
+
+}
+
+// PrependItems adds an arbitrary number of values at the front of a slice.
+func PrependItems(slice []int, values ...int) []int {
+	var valuesSlice []int
+    valuesSlice = append(valuesSlice, values...)
+    slice = append(valuesSlice, slice...)
+    
+    
+    return slice
+}
+
+// RemoveItem removes an item from a slice by modifying the existing slice.
+func RemoveItem(slice []int, index int) []int {
+ 
+    if index < 0 || index >= len(slice){
+       return slice    
+    }
+    
+	return slices.Delete(slice,index,(index+1))
 }
