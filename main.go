@@ -1,12 +1,9 @@
 package main
 
 import (
-	"fmt"
-	"github.com/sergiohdljr/go-exercism.git/slices"
+	"github.com/sergiohdljr/go-exercism.git/for"
 )
 
 func main() {
-	cards := slices.RemoveItem([]int{3, 2, 6, 4, 8}, 2)
-    fmt.Println(cards, "// Output: [3 2 4 8]")
-
+	forGo.Go_by_example_for()
 }
