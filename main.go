@@ -7,7 +7,8 @@ import (
 )
 
 func main() {
-   birdsPerDay := []int{2, 5, 0, 7, 4, 1, 3, 0, 2, 5, 0, 1, 3, 1}
-   fmt.Println(forGo.BirdsInWeek(birdsPerDay, 2)) 
-   // => 12
+   birdsPerDay := []int{3, 0, 5, 1, 0, 4, 1, 0, 3, 4, 3, 0}
+   fmt.Println(forGo.FixBirdCountLog(birdsPerDay))
+// => [3 5 1 7 5 1]
+   
 }
