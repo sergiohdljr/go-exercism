@@ -7,10 +7,7 @@ import (
 )
 
 func main() {
-	layers := []string{"sauce", "noodles", "sauce", "meat", "mozzarella", "noodles"}
 
-	fmt.Println(lasagna.PreparationTime(layers, 3))
-
-	fmt.Println(lasagna.PreparationTime(layers, 0))
+	fmt.Println(lasagna.Quantities([]string{"sauce", "noodles", "sauce", "meat", "mozzarella", "noodles"}))
 
 }
