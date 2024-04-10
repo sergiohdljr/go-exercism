@@ -3,12 +3,14 @@ package main
 import (
 	"fmt"
 
-	"github.com/sergiohdljr/go-exercism.git/for"
+	lasagna "github.com/sergiohdljr/go-exercism.git/functions"
 )
 
 func main() {
-   birdsPerDay := []int{3, 0, 5, 1, 0, 4, 1, 0, 3, 4, 3, 0}
-   fmt.Println(forGo.FixBirdCountLog(birdsPerDay))
-// => [3 5 1 7 5 1]
-   
+	layers := []string{"sauce", "noodles", "sauce", "meat", "mozzarella", "noodles"}
+
+	fmt.Println(lasagna.PreparationTime(layers, 3))
+
+	fmt.Println(lasagna.PreparationTime(layers, 0))
+
 }
