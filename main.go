@@ -8,6 +8,9 @@ import (
 
 func main() {
 
-	fmt.Println(lasagna.Quantities([]string{"sauce", "noodles", "sauce", "meat", "mozzarella", "noodles"}))
+	friendsList := []string{"noodles", "sauce", "mozzarella", "kampot pepper"}
+	myList := []string{"noodles", "meat", "sauce", "mozzarella", "?"}
+
+	fmt.Printf(lasagna.AddSecretIngredient(friendsList, myList))
 
 }

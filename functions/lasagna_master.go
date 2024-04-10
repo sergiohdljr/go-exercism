@@ -28,8 +28,10 @@ func Quantities(slice []string) (int, float64) {
 }
 
 // TODO: define the 'AddSecretIngredient()' function
-func AddSecretIngredient(friendList []string, myList []string) {
-	panic("error")
+func AddSecretIngredient(friendList []string, myList []string) []string {
+	secretIncredient := friendList[len(friendList)-1]
+	myList[len(myList)-1] = secretIncredient
+	return myList
 }
 
 // TODO: define the 'ScaleRecipe()' function
