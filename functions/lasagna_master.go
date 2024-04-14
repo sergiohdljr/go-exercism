@@ -24,17 +24,21 @@ func Quantities(slice []string) (int, float64) {
 	}
 
 	return noodlesQuantity * 50, sauce * 0.2
-
 }
 
 // TODO: define the 'AddSecretIngredient()' function
-func AddSecretIngredient(friendList []string, myList []string) []string {
+func AddSecretIngredient(friendList []string, myList []string) {
 	secretIncredient := friendList[len(friendList)-1]
 	myList[len(myList)-1] = secretIncredient
-	return myList
 }
 
 // TODO: define the 'ScaleRecipe()' function
 func ScaleRecipe(quantities []float64, portions int) []float64 {
-	panic("error")
+	copyQuantities := make([]float64, len(quantities))
+
+	for i := 0; i < len(quantities); i++ {
+		copyQuantities[i] = quantities[i]  / 2 * float64(portions)
+	}
+
+	return copyQuantities
 }

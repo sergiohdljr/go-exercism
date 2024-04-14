@@ -8,9 +8,9 @@ import (
 
 func main() {
 
-	friendsList := []string{"noodles", "sauce", "mozzarella", "kampot pepper"}
-	myList := []string{"noodles", "meat", "sauce", "mozzarella", "?"}
-
-	fmt.Printf(lasagna.AddSecretIngredient(friendsList, myList))
+	quantities := []float64{0.5, 250, 150, 3, 0.5}
+	scaledQuantities := lasagna.ScaleRecipe(quantities, 6)
+	fmt.Println(scaledQuantities)
+	// => []float64{1.5, 750, 450, 9, 1.5}
 
 }
